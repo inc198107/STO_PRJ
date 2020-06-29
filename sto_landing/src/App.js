@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
 import LandingPage from './Pages/LandingPage/LandingPage';
-import MainBackground from './components/background/background'
+import MainBackground from './components/background/background';
+import { defaultTheme } from './Theme/DefaultTheme';
 
 const useStyle = makeStyles((theme) => ({
   main: {
@@ -13,12 +14,14 @@ const useStyle = makeStyles((theme) => ({
 function App() {
   const classes = useStyle();
   return (
-    <Fragment>
-      <MainBackground />
-      <div className={`App ${classes.main}`}>
-        <LandingPage />
-      </div>
-    </Fragment>
+    <ThemeProvider theme={defaultTheme} >
+      <Fragment>
+        <MainBackground />
+        <div className={`App ${classes.main}`}>
+          <LandingPage />
+        </div>
+      </Fragment>
+    </ThemeProvider>
   );
 }
 
