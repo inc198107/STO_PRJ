@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import GalleryWithPreview from "../GalleryWIthPreview/GalleryWithPreview";
 import { Grid, Paper } from "@material-ui/core";
 
 const useStyle = makeStyles((theme) => ({
@@ -30,7 +31,7 @@ const useStyle = makeStyles((theme) => ({
     "& h5": {
       marginTop: 0,
       marginBottom: "16px",
-      fontSize: "16px",
+      fontSize: "18px",
     },
   },
   horizontal: {
@@ -40,13 +41,16 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: theme.palette.error.dark,
     opacity: "1",
   },
+  galery_container:{
+    padding: '8px',
+  },
 }));
 
 export default function Article({
-  images,
   text,
   name,
   articleName,
+  slides,
   id,
   reverse,
   ...props
@@ -69,7 +73,9 @@ export default function Article({
             spacing={2}
           >
             <Grid item xl={5} lg={5} md={6} sm={12}>
-              <Paper elevation={3}>"blslsls"</Paper>
+              <Paper elevation={3} className={classes.galery_container}>
+                <GalleryWithPreview images={slides} />
+              </Paper>
             </Grid>
             <Grid item xl={7} lg={7} md={6} sm={12}>
               <div className={classes.article_text}>
