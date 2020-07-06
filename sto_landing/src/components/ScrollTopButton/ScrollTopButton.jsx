@@ -6,9 +6,10 @@ import Button from "@material-ui/core/Button";
 
 const UseStyles = makeStyles((theme) => ({
   go_top_btn: {
-    borderRadius: "25px",
+    borderRadius: "50%",
     width: "50px",
     height: "50px",
+    minWidth: "50px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -20,10 +21,15 @@ const UseStyles = makeStyles((theme) => ({
 export default function ScrollTopButton({ ...props }) {
   const classes = UseStyles();
   const goTop = () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <Button color="default" variant="contained" className={classes.go_top_btn} onClick={goTop}>
+    <Button
+      color="default"
+      variant="contained"
+      className={classes.go_top_btn}
+      onClick={goTop}
+    >
       <ExpandLessIcon fontSize="large" color="inherit" />
     </Button>
   );
