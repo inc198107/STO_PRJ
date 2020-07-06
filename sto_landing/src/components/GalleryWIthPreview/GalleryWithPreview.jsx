@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PageContext } from "../../Pages/LandingPage/pageReducer";
+import { PageContext } from "../../pageReducers/LandingPageReducer";
 import { makeStyles } from "@material-ui/core/styles";
 import { GridList, GridListTile } from "@material-ui/core";
 
@@ -29,7 +29,7 @@ export default function GalleryWithPreview({ images, ...props }) {
   const { dispatch } = useContext(PageContext);
   return (
     <div className={classes.galery_container}>
-      <GridList cellHeight={200} className={classes.gridList} cols={3}>
+      <GridList cellHeight={160} className={classes.gridList} cols={3}>
         {images?.map((tile) => (
           <GridListTile
             className={classes.tile}

@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import { PageContext } from "../../Pages/LandingPage/pageReducer";
+import { PageContext } from "../../pageReducers/LandingPageReducer";
 import { makeStyles } from "@material-ui/core/styles";
 import { Paper, Modal, useMediaQuery } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
   preview_container: {
     width: "calc(100% - 32px)",
     maxWidth: "1000px",
-    border: "1px solid",
-    borderColor: theme.palette.secondary.dark,
+    //border: "1px solid",
+    //borderColor: theme.palette.secondary.dark,
     borderRadius: "6px",
     overflow: "hidden",
     cursor: "zoom-in",
@@ -38,6 +38,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     minHeight: "24px",
     color: theme.palette.text.disabled,
+    borderRadius:'6px',
+    padding: '2px 8px',
+    boxSizing: 'border-box',
+    backgroundColor: theme.backgrounds.backgroundSecondary,
     top: "24px",
     left: "calc(50% - 50px)",
     zIndex: "1",
@@ -53,11 +57,13 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   close: {
-    width: "24px",
-    height: "24px",
+    width: "39px",
+    height: "39px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    borderRadius: '6px',
+    backgroundColor: theme.backgrounds.backgroundSecondary,
     position: "absolute",
     top: "24px",
     right: "24px",

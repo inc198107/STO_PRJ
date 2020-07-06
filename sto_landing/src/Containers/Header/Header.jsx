@@ -1,14 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
-import headerBckgr from "../../Assets/images/header_bckgr.jpg";
+import { Grid, Link, useMediaQuery } from "@material-ui/core";
+import headerBckgr from "../../Assets/images/header_bckgr_bw.jpg";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
     display: "flex",
     boxSizing: "border-box",
     width: "100%",
-    minHeight: "400px",
+    minHeight: "100vh",
     background: `url(${headerBckgr}) no-repeat`,
     backgroundSize: "cover",
     padding: "16px",
@@ -33,6 +33,15 @@ const useStyles = makeStyles((theme) => ({
       fontFamily: "Western",
     },
   },
+  site_name_mobile:{
+    " & h1": {
+      paddingLeft: "0",
+      paddingRight: "0",
+      textAlign: "center",
+      fontSize: "70px",
+      fontFamily: "Western",
+    },
+  },
   horizontal: {
     display: "flex",
     width: "100%",
@@ -41,23 +50,26 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
   },
   links: {
-    color: "#ffffff",
-    fontFamily: "Western",
-    fontSize: "16px",
-    textTransform: "uppercase",
+    "& a": {
+      color: "#ffffff",
+      fontFamily: "Western",
+      fontSize: "24px",
+      textTransform: "uppercase",
+    },
   },
 }));
 
 export default function Header({ links, ...props }) {
   const classes = useStyles();
+  const mobile = useMediaQuery("(max-width:576px)");
   return (
     <div item className={classes.header_root}>
-      <Grid container direction="column" justify="space-between">
-        <Grid container>
-          <Grid item lg={12} className={classes.main_title}>
-            <div className={classes.site_name}>
+      <Grid container direction="column" justify="space-around" alignItems="center">
+        <Grid container alignItems="center">
+          <Grid item xl={12} lg={12} md={12} sm={12} className={classes.main_title}>
+            <div className={!mobile? `${classes.site_name}`: `${classes.site_name} ${classes.site_name_mobile}`}>
               <div className={classes.horizontal} />
-              <h1>{`West Service`}</h1>
+              <h1>{`Western Chip`}</h1>
               <div className={classes.horizontal} />
             </div>
           </Grid>
@@ -70,16 +82,16 @@ export default function Header({ links, ...props }) {
           className={classes.links}
         >
           <Grid item>
-            <span>Four</span>
+            <Link href="/#steering">Кермові системи</Link>
           </Grid>
           <Grid item>
-            <span>One</span>
+            <Link href="/#steering">One</Link>
           </Grid>
           <Grid item>
-            <span>Two</span>
+          <Link href="/#steering">Two</Link>
           </Grid>
           <Grid item>
-            <span>Three</span>
+          <Link href="/#steering">Three</Link>
           </Grid>
         </Grid>
       </Grid>

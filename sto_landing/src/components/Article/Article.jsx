@@ -25,13 +25,12 @@ const useStyle = makeStyles((theme) => ({
     padding: "16px",
     boxSizing: "border-box",
     paddingTop: 0,
-    fontSize: "14px",
     fontFamily: "Roboto",
     color: theme.colors.primary,
     "& h5": {
       marginTop: 0,
       marginBottom: "16px",
-      fontSize: "18px",
+      fontSize: "24px",
     },
   },
   horizontal: {
@@ -44,6 +43,11 @@ const useStyle = makeStyles((theme) => ({
   galery_container:{
     padding: '8px',
   },
+  article_p:{
+    fontFamily:'Roboto', 
+    fontSize: '16px',
+    lineHeight: '1.43'
+  }
 }));
 
 export default function Article({
@@ -51,7 +55,7 @@ export default function Article({
   name,
   articleName,
   slides,
-  id,
+  _id,
   reverse,
   ...props
 }) {
@@ -60,7 +64,7 @@ export default function Article({
     <Grid item xl={12} lg={12} md={12} sm={12}>
       <Grid container direction="column">
         <Grid item xl={12} lg={12} md={12} sm={12}>
-          <div id={id} className={classes.article_name}>
+          <div id={_id} className={classes.article_name}>
             <div className={classes.horizontal} />
             <h3>{`${name}`}</h3>
             <div className={classes.horizontal} />
@@ -80,7 +84,7 @@ export default function Article({
             <Grid item xl={7} lg={7} md={6} sm={12}>
               <div className={classes.article_text}>
                 <h5>{articleName}</h5>
-                <div>{text}</div>
+                <div className={classes.article_p}>{text}</div>
               </div>
             </Grid>
           </Grid>

@@ -8,9 +8,6 @@ import reyka7 from './images/reyka_slider/reyka7.jpg';
 import reyka8 from './images/reyka_slider/reyka8.jpg';
 import reyka9 from './images/reyka_slider/reyka9.jpg';
 import reyka10 from './images/reyka_slider/reyka10.jpg';
-import reyka11 from './images/reyka_slider/reyka11.jpg';
-import reyka13 from './images/reyka_slider/reyka13.jpg';
-
 
 export const reykaArr = [
     {
@@ -31,7 +28,7 @@ export const reykaArr = [
     {
         img: reyka4,
         title: 'Image',
-        cols: 1,
+        cols: 2,
     },
     {
         img: reyka5,
@@ -44,19 +41,9 @@ export const reykaArr = [
         cols: 2,
     },
     {
-        img: reyka7,
-        title: 'Image',
-        cols: 1,
-    },
-    {
         img: reyka8,
         title: 'Image',
         cols: 2,
-    },
-    {
-        img: reyka9,
-        title: 'Image',
-        cols: 1,
     },
     {
         img: reyka10,
@@ -64,13 +51,14 @@ export const reykaArr = [
         cols: 1,
     },
     {
-        img: reyka11,
+        img: reyka9,
         title: 'Image',
         cols: 1,
     },
     {
-        img: reyka13,
+        img: reyka7,
         title: 'Image',
-        cols: 1,
+        cols: 2,
     },
+    
 ]
