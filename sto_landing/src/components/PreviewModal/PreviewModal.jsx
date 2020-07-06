@@ -16,8 +16,6 @@ const useStyles = makeStyles((theme) => ({
   preview_container: {
     width: "calc(100% - 32px)",
     maxWidth: "1000px",
-    //border: "1px solid",
-    //borderColor: theme.palette.secondary.dark,
     borderRadius: "6px",
     overflow: "hidden",
     cursor: "zoom-in",
@@ -36,13 +34,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    minHeight: "24px",
+    minHeight: "16px",
     color: theme.palette.text.disabled,
-    borderRadius:'6px',
+    borderRadius:'16px',
     padding: '2px 8px',
     boxSizing: 'border-box',
     backgroundColor: theme.backgrounds.backgroundSecondary,
-    top: "24px",
+    top: "16px",
     left: "calc(50% - 50px)",
     zIndex: "1",
     "& svg": {
@@ -57,16 +55,16 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   close: {
-    width: "39px",
-    height: "39px",
+    width: "28px",
+    height: "28px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: '6px',
+    borderRadius: '50%',
     backgroundColor: theme.backgrounds.backgroundSecondary,
     position: "absolute",
-    top: "24px",
-    right: "24px",
+    top: "16px",
+    right: "16px",
     zIndex: "1",
     cursor: "pointer",
     color: theme.palette.text.disabled,
@@ -98,7 +96,7 @@ export default function ({ ...props }) {
     >
       <Paper elevation={3} className={classes.preview_container}>
         <div className={classes.close} onClick={modalClose}>
-          <CloseIcon fontSize="large" color="inherit" />
+          <CloseIcon  color="inherit" />
         </div>
         <TransformWrapper>
           {({ zoomIn, zoomOut, ...props }) => (
@@ -107,12 +105,10 @@ export default function ({ ...props }) {
                 <div className={classes.controls}>
                   <ZoomOutIcon
                     onClick={zoomOut}
-                    fontSize="large"
                     color="inherit"
                   />
                   <ZoomInIcon
                     onClick={zoomIn}
-                    fontSize="large"
                     color="inherit"
                   />
                 </div>

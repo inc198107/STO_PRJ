@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import MainContainer from "../../Containers/MainContainer";
 import Article from "../../components/Article";
 import PreviewModal from "../../components/PreviewModal";
+import  ScrollTopButton from "../../components/ScrollTopButton";
 import {
   PageContext,
   initialState,
@@ -12,8 +13,8 @@ import {
 
 import Header from "../../Containers/Header";
 
-import { reykaArr } from "../../Assets/imgArrays";
-import { reykaText } from "../../Assets/articles";
+import { reykaArr, tuningArr } from "../../Assets/imgArrays";
+import { reykaText, tuningText } from "../../Assets/articles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,9 +22,26 @@ const useStyles = makeStyles((theme) => ({
   },
   main_sheet: {
     padding: "16px",
-    // minHeight: "100vh",
+    minHeight: "100vh",
     marginTop: "32px",
+    position: "relative"
   },
+  scroll_top_container_left:{
+    position: 'absolute',
+    left: '24px',
+    bottom: '24px',
+    display: "flex",
+    alignItems:"center",
+    justifyContent:"center"
+  },
+  scroll_top_container_right:{
+    position: 'absolute',
+    right: '24px',
+    bottom: '24px',
+    display: "flex",
+    alignItems:"center",
+    justifyContent:"center"
+  }
 }));
 
 export default function LandingPage({ ...props }) {
@@ -48,14 +66,22 @@ export default function LandingPage({ ...props }) {
                   text={reykaText}
                   articleName={"Ремонт Кермових Рейок"}
                 />
+                <div className={classes.scroll_top_container_right}>
+                  < ScrollTopButton/>
+                </div>
               </Paper>
               <Paper className={classes.main_sheet} elevation={1}>
                 <Article
-                  name={"Reyka"}
-                  text={"supermega"}
-                  articleName={"Reyka"}
+                  _id={"chip_tuning"}
+                  name={"Chip Tuning"}
+                  slides={tuningArr}
+                  text={tuningText}
+                  articleName={"Чіп Тюнінг, Зроби своє авто таким як ти бажаєш"}
                   reverse={true}
                 />
+                <div className={classes.scroll_top_container_left}>
+                  < ScrollTopButton/>
+                </div>
               </Paper>
             </Grid>
           </div>

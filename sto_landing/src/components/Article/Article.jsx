@@ -77,15 +77,15 @@ export default function Article({
             spacing={2}
           >
             <Grid item xl={5} lg={5} md={6} sm={12}>
-              <Paper elevation={3} className={classes.galery_container}>
+              <Paper elevation={2} className={classes.galery_container}>
                 <GalleryWithPreview images={slides} />
               </Paper>
             </Grid>
             <Grid item xl={7} lg={7} md={6} sm={12}>
-              <div className={classes.article_text}>
+              <article className={classes.article_text}>
                 <h5>{articleName}</h5>
-                <div className={classes.article_p}>{text}</div>
-              </div>
+                <p className={classes.article_p}>{text}</p>
+              </article>
             </Grid>
           </Grid>
         </Grid>

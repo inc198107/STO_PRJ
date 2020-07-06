@@ -9,6 +9,11 @@ import reyka8 from './images/reyka_slider/reyka8.jpg';
 import reyka9 from './images/reyka_slider/reyka9.jpg';
 import reyka10 from './images/reyka_slider/reyka10.jpg';
 
+import tuning1 from './images/tuning_slider/tuning1.jpg';
+import tuning2 from './images/tuning_slider/tuning2.jpg';
+import tuning3 from './images/tuning_slider/tuning3.jpg';
+import tuning4 from './images/tuning_slider/tuning4.jpg';
+
 export const reykaArr = [
     {
         img: reyka1,
@@ -61,4 +66,26 @@ export const reykaArr = [
         cols: 2,
     },
     
+]
+export const tuningArr = [
+    {
+        img: tuning1,
+        title: 'Image',
+        cols: 2,
+    },
+    {
+        img: tuning2,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: tuning3,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: tuning4,
+        title: 'Image',
+        cols: 2,
+    },
 ]

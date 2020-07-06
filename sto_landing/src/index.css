@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Western";
+  src: url('../src/Assets/fonts/Western.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Western";
+  src: url('../src/Assets/fonts/Western.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family:  "Western";
+  src: url('../src/Assets/fonts/Western.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Quentin";
+  src: url('../src/Assets/fonts/Quentin/Quentin.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Quentin";
+  src: url('../src/Assets/fonts/Quentin/Quentin.otf') format('opentype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: "Quentin";
+  src: url('../src/Assets/fonts/Quentin/Quentin.otf') format('opentype');
+  font-style: normal;
+  font-weight: bold;
+}
+
+

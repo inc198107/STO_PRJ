@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Link, useMediaQuery } from "@material-ui/core";
 import headerBckgr from "../../Assets/images/header_bckgr_bw.jpg";
+import { ReactComponent as Steering } from "../../Assets/images/icons/steering-wheel.svg";
+import { ReactComponent as Tuning } from "../../Assets/images/icons/processor.svg";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
@@ -29,11 +31,11 @@ const useStyles = makeStyles((theme) => ({
       paddingLeft: "32px",
       paddingRight: "32px",
       textAlign: "center",
-      fontSize: "90px",
+      fontSize: "100px",
       fontFamily: "Western",
     },
   },
-  site_name_mobile:{
+  site_name_mobile: {
     " & h1": {
       paddingLeft: "0",
       paddingRight: "0",
@@ -41,6 +43,20 @@ const useStyles = makeStyles((theme) => ({
       fontSize: "70px",
       fontFamily: "Western",
     },
+  },
+  slogan_wrapper: {
+    justifyContent: "center",
+  },
+  slogan: {
+    fontFamily: "Quentin",
+    fontSize: "54px",
+    transform: "rotate(-10deg)",
+    color: theme.palette.background.default,
+    display: "flex",
+    justifyContent: "center"
+  },
+  slogan_mobile:{
+    fontSize: "32px",
   },
   horizontal: {
     display: "flex",
@@ -50,6 +66,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
   },
   links: {
+    marginTop: '16px',
     "& a": {
       color: "#ffffff",
       fontFamily: "Western",
@@ -62,12 +79,31 @@ const useStyles = makeStyles((theme) => ({
 export default function Header({ links, ...props }) {
   const classes = useStyles();
   const mobile = useMediaQuery("(max-width:576px)");
+  const tablet = useMediaQuery("(max-width:768px)");
   return (
     <div item className={classes.header_root}>
-      <Grid container direction="column" justify="space-around" alignItems="center">
-        <Grid container alignItems="center">
-          <Grid item xl={12} lg={12} md={12} sm={12} className={classes.main_title}>
-            <div className={!mobile? `${classes.site_name}`: `${classes.site_name} ${classes.site_name_mobile}`}>
+      <Grid
+        container
+        direction="column"
+        justify="space-around"
+        alignItems="center"
+      >
+        <Grid container alignItems="center" justify="center">
+          <Grid
+            item
+            xl={12}
+            lg={12}
+            md={12}
+            sm={12}
+            className={classes.main_title}
+          >
+            <div
+              className={
+                !mobile
+                  ? `${classes.site_name}`
+                  : `${classes.site_name} ${classes.site_name_mobile}`
+              }
+            >
               <div className={classes.horizontal} />
               <h1>{`Western Chip`}</h1>
               <div className={classes.horizontal} />
@@ -79,19 +115,44 @@ export default function Header({ links, ...props }) {
           direction="row"
           justify="space-around"
           alignItems="center"
+        >
+          <Grid
+            item
+            xl={5}
+            lg={6}
+            md={7}
+            sm={10}
+            className={classes.slogan_wrapper}
+          >
+            <span className={!tablet?classes.slogan:`${classes.slogan} ${classes.slogan_mobile}`}>{`We will make Your Car Perfect!`}</span>
+          </Grid>
+        </Grid>
+        <Grid
+          container
+          direction="row"
+          justify="space-around"
+          alignItems="center"
           className={classes.links}
         >
           <Grid item>
-            <Link href="/#steering">Кермові системи</Link>
+            <Link href="/#steering">
+              {!tablet ? (
+                `Кермові системи`
+              ) : (
+                <Steering width="40px" height="40px" />
+              )}
+            </Link>
           </Grid>
           <Grid item>
-            <Link href="/#steering">One</Link>
+            <Link href="/#chip_tuning">
+              {!tablet ? `Chip Tuning` : <Tuning width="40px" height="40px" />}
+            </Link>
           </Grid>
           <Grid item>
-          <Link href="/#steering">Two</Link>
+            <Link href="/#steering">Two</Link>
           </Grid>
           <Grid item>
-          <Link href="/#steering">Three</Link>
+            <Link href="/#steering">Three</Link>
           </Grid>
         </Grid>
       </Grid>

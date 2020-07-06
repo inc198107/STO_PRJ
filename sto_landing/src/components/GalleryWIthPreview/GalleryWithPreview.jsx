@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { PageContext } from "../../pageReducers/LandingPageReducer";
 import { makeStyles } from "@material-ui/core/styles";
-import { GridList, GridListTile } from "@material-ui/core";
+import { GridList, GridListTile, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   galery_container: {
@@ -22,14 +22,19 @@ const useStyles = makeStyles((theme) => ({
     },
     transition: "transform 0.2s ease",
   },
+  mobile_wieve:{
+    maxHeight: '360px',
+    overflowY: 'scroll',
+  }
 }));
 
 export default function GalleryWithPreview({ images, ...props }) {
   const classes = useStyles();
   const { dispatch } = useContext(PageContext);
+  const mobile = useMediaQuery("(max-width:576px)");
   return (
-    <div className={classes.galery_container}>
-      <GridList cellHeight={160} className={classes.gridList} cols={3}>
+    <div className={!mobile? `${classes.galery_container}`: `${classes.galery_container} ${classes.mobile_wieve}`}>
+      <GridList cellHeight={160} className={classes.gridList} cols={!mobile? 3 : 1}>
         {images?.map((tile) => (
           <GridListTile
             className={classes.tile}
