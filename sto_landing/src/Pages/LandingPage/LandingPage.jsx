@@ -3,8 +3,9 @@ import { Grid, Paper } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MainContainer from "../../Containers/MainContainer";
 import Article from "../../components/Article";
+import Contacts from "../../Containers/Contacts/Contacts";
 import PreviewModal from "../../components/PreviewModal";
-import  ScrollTopButton from "../../components/ScrollTopButton";
+import ScrollTopButton from "../../components/ScrollTopButton";
 import {
   PageContext,
   initialState,
@@ -22,26 +23,18 @@ const useStyles = makeStyles((theme) => ({
   },
   main_sheet: {
     padding: "16px",
-    minHeight: "100vh",
     marginTop: "32px",
-    position: "relative"
+    position: "relative",
   },
-  scroll_top_container_left:{
-    position: 'absolute',
-    left: '24px',
-    bottom: '24px',
+  scroll_top_container_left: {
+    position: "sticky",
+    bottom: "16px",
+    paddingTop: "30px",
+    paddingRight: "24px",
     display: "flex",
-    alignItems:"center",
-    justifyContent:"center"
+    alignItems: "center",
+    justifyContent: "flex-end",
   },
-  scroll_top_container_right:{
-    position: 'absolute',
-    right: '24px',
-    bottom: '24px',
-    display: "flex",
-    alignItems:"center",
-    justifyContent:"center"
-  }
 }));
 
 export default function LandingPage({ ...props }) {
@@ -66,9 +59,6 @@ export default function LandingPage({ ...props }) {
                   text={reykaText}
                   articleName={"Ремонт Кермових Рейок"}
                 />
-                <div className={classes.scroll_top_container_right}>
-                  < ScrollTopButton/>
-                </div>
               </Paper>
               <Paper className={classes.main_sheet} elevation={1}>
                 <Article
@@ -79,11 +69,14 @@ export default function LandingPage({ ...props }) {
                   articleName={"Чіп Тюнінг, Зроби своє авто таким як ти бажаєш"}
                   reverse={true}
                 />
-                <div className={classes.scroll_top_container_left}>
-                  < ScrollTopButton/>
-                </div>
+              </Paper>
+              <Paper className={classes.main_sheet} elevation={1}>
+                <Contacts></Contacts>
               </Paper>
             </Grid>
+          </div>
+          <div className={classes.scroll_top_container_left}>
+            <ScrollTopButton />
           </div>
         </MainContainer>
         <PreviewModal />

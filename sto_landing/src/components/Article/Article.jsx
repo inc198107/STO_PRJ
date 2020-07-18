@@ -40,14 +40,14 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: theme.palette.error.dark,
     opacity: "1",
   },
-  galery_container:{
-    padding: '8px',
+  galery_container: {
+    padding: "8px",
   },
-  article_p:{
-    fontFamily:'Roboto', 
-    fontSize: '16px',
-    lineHeight: '1.43'
-  }
+  article_p: {
+    fontFamily: "Roboto",
+    fontSize: "16px",
+    lineHeight: "1.43",
+  },
 }));
 
 export default function Article({
@@ -84,7 +84,12 @@ export default function Article({
             <Grid item xl={7} lg={7} md={6} sm={12}>
               <article className={classes.article_text}>
                 <h5>{articleName}</h5>
-                <p className={classes.article_p}>{text}</p>
+                <p
+                  className={classes.article_p}
+                  dangerouslySetInnerHTML={{
+                    __html: text.replace(/\n/g, "</br>"),
+                  }}
+                />
               </article>
             </Grid>
           </Grid>
