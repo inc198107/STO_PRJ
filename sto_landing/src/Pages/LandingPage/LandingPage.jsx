@@ -1,11 +1,12 @@
 import React, { Fragment, useReducer } from "react";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MainContainer from "../../Containers/MainContainer";
 import Article from "../../components/Article";
 import Contacts from "../../Containers/Contacts/Contacts";
 import PreviewModal from "../../components/PreviewModal";
 import ScrollTopButton from "../../components/ScrollTopButton";
+import Footer from "../../Containers/Footer"
 import {
   PageContext,
   initialState,
@@ -20,11 +21,6 @@ import { reykaText, tuningText } from "../../Assets/articles";
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
-  },
-  main_sheet: {
-    padding: "16px",
-    marginTop: "32px",
-    position: "relative",
   },
   scroll_top_container_left: {
     position: "sticky",
@@ -51,34 +47,35 @@ export default function LandingPage({ ...props }) {
         <MainContainer>
           <div className={classes.root}>
             <Grid container direction="column" justify="flex-start" spacing={2}>
-              <Paper className={classes.main_sheet} elevation={1}>
-                <Article
-                  _id={"steering"}
-                  name={"Кермові Системи"}
-                  slides={reykaArr}
-                  text={reykaText}
-                  articleName={"Ремонт Кермових Рейок"}
-                />
-              </Paper>
-              <Paper className={classes.main_sheet} elevation={1}>
-                <Article
-                  _id={"chip_tuning"}
-                  name={"Chip Tuning"}
-                  slides={tuningArr}
-                  text={tuningText}
-                  articleName={"Чіп Тюнінг, Зроби своє авто таким як ти бажаєш"}
-                  reverse={true}
-                />
-              </Paper>
-              <Paper className={classes.main_sheet} elevation={1}>
-                <Contacts></Contacts>
-              </Paper>
+              <Article
+                _id={"steering"}
+                name={"Кермові Системи"}
+                slides={reykaArr}
+                text={reykaText}
+                articleName={"Ремонт Кермових Рейок"}
+              />
+
+              <Article
+                _id={"chip_tuning"}
+                name={"Chip Tuning"}
+                slides={tuningArr}
+                text={tuningText}
+                articleName={"Чіп Тюнінг, Зроби своє авто таким як ти бажаєш"}
+                reverse={true}
+              />
+
+              <Contacts />
             </Grid>
           </div>
           <div className={classes.scroll_top_container_left}>
             <ScrollTopButton />
           </div>
         </MainContainer>
+        <Grid container alignItems="center" justify="center">
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            <Footer />
+          </Grid>
+        </Grid>
         <PreviewModal />
       </Fragment>
     </PageContext.Provider>

@@ -4,6 +4,7 @@ import { Grid, Link, useMediaQuery } from "@material-ui/core";
 import headerBckgr from "../../Assets/images/header_bckgr_bw.jpg";
 import { ReactComponent as Steering } from "../../Assets/images/icons/steering-wheel.svg";
 import { ReactComponent as Tuning } from "../../Assets/images/icons/processor.svg";
+import { ReactComponent as Contacts } from "../../Assets/images/icons/contacts-icon.svg";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
@@ -95,6 +96,7 @@ export default function Header({ links, ...props }) {
             lg={12}
             md={12}
             sm={12}
+            xs={12}
             className={classes.main_title}
           >
             <div
@@ -122,6 +124,7 @@ export default function Header({ links, ...props }) {
             lg={6}
             md={7}
             sm={10}
+            xs={10}
             className={classes.slogan_wrapper}
           >
             <span className={!tablet?classes.slogan:`${classes.slogan} ${classes.slogan_mobile}`}>{`We will make Your Car Perfect!`}</span>
@@ -152,7 +155,7 @@ export default function Header({ links, ...props }) {
             <Link href="/#steering">Two</Link>
           </Grid>
           <Grid item>
-            <Link href="/#steering">Three</Link>
+              <Link href="/#contacts">  {!tablet ? `Контакти` : <Contacts width="40px" height="40px" />}</Link>
           </Grid>
         </Grid>
       </Grid>
