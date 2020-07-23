@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { PageContext } from "../../pageReducers/LandingPageReducer";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { GridList, GridListTile, useMediaQuery } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
 export default function GalleryWithPreview({ images, ...props }) {
   const classes = useStyles();
   const { dispatch } = useContext(PageContext);
-  const mobile = useMediaQuery("(max-width:576px)");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <div className={!mobile? `${classes.galery_container}`: `${classes.galery_container} ${classes.mobile_wieve}`}>
       <GridList cellHeight={160} className={classes.gridList} cols={!mobile? 3 : 1}>

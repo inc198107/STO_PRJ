@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-//import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import Button from "@material-ui/core/Button";
 
@@ -28,7 +27,9 @@ export default function ScrollTopButton({ ...props }) {
       color="default"
       variant="contained"
       className={classes.go_top_btn}
-      onClick={goTop}
+      onClick={() => {
+        goTop();
+      }}
     >
       <ExpandLessIcon fontSize="large" color="inherit" />
     </Button>

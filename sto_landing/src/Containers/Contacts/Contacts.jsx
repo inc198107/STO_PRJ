@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Link, Paper, useMediaQuery } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import LeafMap from "../../components/Map";
 import { ReactComponent as TuningAva } from "../../Assets/images/icons/chiptuning-ava.svg";
 import { ReactComponent as SteeringAva } from "../../Assets/images/icons/steering-ava.svg";
@@ -163,7 +163,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Contacts({ ...props }) {
   const classes = useStyles();
-  const mobile = useMediaQuery("(max-width:576px)");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
       <Paper className={!mobile? classes.main_sheet : `${classes.main_sheet} ${classes.main_sheet_mobile}`} elevation={1}>

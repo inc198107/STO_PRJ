@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import { PageContext } from "../../pageReducers/LandingPageReducer";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { Paper, Modal, useMediaQuery } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import ZoomInIcon from "@material-ui/icons/ZoomIn";
@@ -12,14 +12,18 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    boxSizing: 'border-box',
+    padding: '8px',
   },
   preview_container: {
-    width: "calc(100% - 32px)",
     maxWidth: "1000px",
     borderRadius: "6px",
     overflow: "hidden",
     cursor: "zoom-in",
     position: "relative",
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     backgroundColor: "rgba(255,255,255, 0.8)",
   },
   preview_img: {
@@ -83,7 +87,8 @@ export default function ({ ...props }) {
   const classes = useStyles();
   const picture = state.imageToPreview;
 
-  const mobile = useMediaQuery("(max-width:576px)");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
 
   const modalClose = () => {
     dispatch({ type: "PREVIEW_HIDE", payload: {} });

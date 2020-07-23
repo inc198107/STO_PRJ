@@ -6,7 +6,7 @@ import Article from "../../components/Article";
 import Contacts from "../../Containers/Contacts/Contacts";
 import PreviewModal from "../../components/PreviewModal";
 import ScrollTopButton from "../../components/ScrollTopButton";
-import Footer from "../../Containers/Footer"
+import Footer from "../../Containers/Footer";
 import {
   PageContext,
   initialState,
@@ -15,14 +15,28 @@ import {
 
 import Header from "../../Containers/Header";
 
-import { reykaArr, tuningArr } from "../../Assets/imgArrays";
-import { reykaText, tuningText } from "../../Assets/articles";
+import {
+  reykaArr,
+  tuningArr,
+  dpfArr,
+  egrArr,
+  srsArr,
+  odoArr,
+} from "../../Assets/imgArrays";
+import {
+  reykaText,
+  tuningText,
+  dpfText,
+  egrText,
+  srsText,
+  odoText,
+} from "../../Assets/articles";
 
 const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: "100vh",
   },
-  scroll_top_container_left: {
+  scroll_top_container_right: {
     position: "sticky",
     bottom: "16px",
     paddingTop: "30px",
@@ -51,6 +65,7 @@ export default function LandingPage({ ...props }) {
                 _id={"steering"}
                 name={"Кермові Системи"}
                 slides={reykaArr}
+                redirect="https://zahid-chip.com/rulov-rejki"
                 text={reykaText}
                 articleName={"Ремонт Кермових Рейок"}
               />
@@ -58,16 +73,57 @@ export default function LandingPage({ ...props }) {
               <Article
                 _id={"chip_tuning"}
                 name={"Chip Tuning"}
+                redirect="https://zahid-chip.com/ch-p-tyuning"
                 slides={tuningArr}
                 text={tuningText}
                 articleName={"Чіп Тюнінг, Зроби своє авто таким як ти бажаєш"}
                 reverse={true}
               />
 
+              <Article
+                _id={"fap_off"}
+                name={"Видалення Сажових Фільтрів"}
+                redirect="https://zahid-chip.com/vidalennya-sazhovih-f-ltr-v"
+                slides={dpfArr}
+                text={dpfText}
+                articleName={"Видалення Сажових Фільтрів"}
+                reverse={false}
+              />
+
+              <Article
+                _id={"egr_off"}
+                name={"Видалення EGR"}
+                redirect="https://zahid-chip.com/vidalennya-egr"
+                slides={egrArr}
+                text={egrText}
+                articleName={"Видалення EGR"}
+                reverse={true}
+              />
+
+              <Article
+                _id={"airbag"}
+                name={"Подушки безпеки"}
+                redirect="https://zahid-chip.com/remont-blok-v-airbag"
+                slides={srsArr}
+                text={srsText}
+                articleName={"Подушки безпеки"}
+                reverse={false}
+              />
+
+              <Article
+                _id={"odo"}
+                name={"Корегування Одометрів"}
+                redirect="https://zahid-chip.com/koreguvannya-odometr-v"
+                slides={odoArr}
+                text={odoText}
+                articleName={"Корегування одометрів"}
+                reverse={true}
+              />
+
               <Contacts />
             </Grid>
           </div>
-          <div className={classes.scroll_top_container_left}>
+          <div className={classes.scroll_top_container_right}>
             <ScrollTopButton />
           </div>
         </MainContainer>

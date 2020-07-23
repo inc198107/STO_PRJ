@@ -1,4 +1,5 @@
 import React from "react";
+import { useTheme } from '@material-ui/core/styles';
 import { makeStyles } from "@material-ui/core/styles";
 import { Grid, Link, useMediaQuery } from "@material-ui/core";
 
@@ -30,7 +31,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Footer({ ...props }) {
-  const mobile = useMediaQuery("(max-width:576px)");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
   const today = new Date();
   const year = today.getFullYear();
   const classes = useStyles();

@@ -14,6 +14,26 @@ import tuning2 from './images/tuning_slider/tuning2.jpg';
 import tuning3 from './images/tuning_slider/tuning3.jpg';
 import tuning4 from './images/tuning_slider/tuning4.jpg';
 
+import dpf0 from './images/dpf_slider/dpf-0.jpg';
+import dpf1 from './images/dpf_slider/dpf-1.jpg';
+import dpf2 from './images/dpf_slider/dpf-2.jpg';
+import dpf3 from './images/dpf_slider/dpf-3.jpg';
+
+import egr0 from './images/egr_slider/egr-0.jpg';
+import egr1 from './images/egr_slider/egr-1.jpg';
+import egr2 from './images/egr_slider/egr-2.jpg';
+
+import srs0 from './images/srs_slider/srs-0.png';
+import srs1 from './images/srs_slider/srs-1.jpg';
+import srs2 from './images/srs_slider/srs-2.jpg';
+
+import odo0 from './images/odo_slider/odo-0.jpg';
+import odo1 from './images/odo_slider/odo-1.jpg';
+import odo2 from './images/odo_slider/odo-2.jpg';
+
+
+
+
 export const reykaArr = [
     {
         img: reyka1,
@@ -66,7 +86,7 @@ export const reykaArr = [
         cols: 2,
     },
     
-]
+];
 export const tuningArr = [
     {
         img: tuning1,
@@ -88,4 +108,81 @@ export const tuningArr = [
         title: 'Image',
         cols: 2,
     },
+];
+export const dpfArr = [
+    {
+        img: dpf0,
+        title: 'Image',
+        cols: 2,
+    },
+    {
+        img: dpf1,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: dpf2,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: dpf3,
+        title: 'Image',
+        cols: 2,
+    },
+];
+
+export const egrArr = [
+    {
+        img: egr0,
+        title: 'Image',
+        cols: 2,
+    },
+    {
+        img: egr1,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: egr2,
+        title: 'Image',
+        cols: 3,
+    },
+    
+];
+export const srsArr = [
+    {
+        img: srs0,
+        title: 'Image',
+        cols: 3,
+    },
+    {
+        img: srs1,
+        title: 'Image',
+        cols: 2,
+    },
+    {
+        img: srs2,
+        title: 'Image',
+        cols: 1,
+    },
+    
+];
+export const odoArr = [
+    {
+        img: odo0,
+        title: 'Image',
+        cols: 1,
+    },
+    {
+        img: odo1,
+        title: 'Image',
+        cols: 2,
+    },
+    {
+        img: odo2,
+        title: 'Image',
+        cols: 3,
+    },
+    
 ]

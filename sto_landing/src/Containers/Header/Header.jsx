@@ -1,10 +1,15 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
 import { Grid, Link, useMediaQuery } from "@material-ui/core";
 import headerBckgr from "../../Assets/images/header_bckgr_bw.jpg";
 import { ReactComponent as Steering } from "../../Assets/images/icons/steering-wheel.svg";
 import { ReactComponent as Tuning } from "../../Assets/images/icons/processor.svg";
 import { ReactComponent as Contacts } from "../../Assets/images/icons/contacts-icon.svg";
+import { ReactComponent as DpfOff } from "../../Assets/images/icons/dpf-icon.svg";
+import { ReactComponent as AirBag } from "../../Assets/images/icons/airbag.svg";
+import { ReactComponent as EgrOff } from "../../Assets/images/icons/egr-icon.svg";
+import { ReactComponent as Odo } from "../../Assets/images/icons/odo-icon.svg";
 
 const useStyles = makeStyles((theme) => ({
   header_root: {
@@ -54,9 +59,9 @@ const useStyles = makeStyles((theme) => ({
     transform: "rotate(-10deg)",
     color: theme.palette.background.default,
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
   },
-  slogan_mobile:{
+  slogan_mobile: {
     fontSize: "32px",
   },
   horizontal: {
@@ -67,20 +72,29 @@ const useStyles = makeStyles((theme) => ({
     opacity: "0.7",
   },
   links: {
-    marginTop: '16px',
+    marginTop: "16px",
     "& a": {
       color: "#ffffff",
       fontFamily: "Western",
       fontSize: "24px",
       textTransform: "uppercase",
+      minWidth: "50px",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin: "14px 8px 0 8px",
     },
+  },
+  category_name: {
+    marginRight: "8px",
   },
 }));
 
 export default function Header({ links, ...props }) {
   const classes = useStyles();
-  const mobile = useMediaQuery("(max-width:576px)");
-  const tablet = useMediaQuery("(max-width:768px)");
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("xs"));
+  const tablet = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <div item className={classes.header_root}>
       <Grid
@@ -127,7 +141,13 @@ export default function Header({ links, ...props }) {
             xs={10}
             className={classes.slogan_wrapper}
           >
-            <span className={!tablet?classes.slogan:`${classes.slogan} ${classes.slogan_mobile}`}>{`We will make Your Car Perfect!`}</span>
+            <span
+              className={
+                !tablet
+                  ? classes.slogan
+                  : `${classes.slogan} ${classes.slogan_mobile}`
+              }
+            >{`We will make Your Car Perfect!`}</span>
           </Grid>
         </Grid>
         <Grid
@@ -140,7 +160,12 @@ export default function Header({ links, ...props }) {
           <Grid item>
             <Link href="/#steering">
               {!tablet ? (
-                `Кермові системи`
+                <Fragment>
+                  <span className={classes.category_name}>
+                    {`Кермові системи`}
+                  </span>
+                  <Steering width="30px" height="30px" />
+                </Fragment>
               ) : (
                 <Steering width="40px" height="40px" />
               )}
@@ -148,14 +173,77 @@ export default function Header({ links, ...props }) {
           </Grid>
           <Grid item>
             <Link href="/#chip_tuning">
-              {!tablet ? `Chip Tuning` : <Tuning width="40px" height="40px" />}
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>{`Chip Tuning`}</span>
+                  <Tuning width="30px" height="30px" />
+                </Fragment>
+              ) : (
+                <Tuning width="40px" height="40px" />
+              )}
             </Link>
           </Grid>
           <Grid item>
-            <Link href="/#steering">Two</Link>
+            <Link href="/#fap_off">
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>{`DPF/FAP off`}</span>
+                  <DpfOff width="60px" height="50px" />
+                </Fragment>
+              ) : (
+                <DpfOff width="50px" height="40px" />
+              )}
+            </Link>
           </Grid>
           <Grid item>
-              <Link href="/#contacts">  {!tablet ? `Контакти` : <Contacts width="40px" height="40px" />}</Link>
+            <Link href="/#egr_off">
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>{`EGR off`}</span>
+                  <EgrOff width="30px" height="30px" />
+                </Fragment>
+              ) : (
+                <EgrOff width="40px" height="40px" />
+              )}
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href="/#airbag">
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>{`Air Bag`}</span>
+                  <AirBag width="30px" height="30px" />
+                </Fragment>
+              ) : (
+                <AirBag width="40px" height="40px" />
+              )}
+            </Link>
+          </Grid>
+          <Grid item>
+            <Link href="/#odo">
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>
+                    {`Корегування Одометрів`}
+                  </span>
+                  <Odo width="30px" height="30px" />
+                </Fragment>
+              ) : (
+                <Odo width="40px" height="40px" />
+              )}
+            </Link>
+          </Grid>
+          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+            <Link href="/#contacts" style={{"marginTop": "22px"}}>
+              {!tablet ? (
+                <Fragment>
+                  <span className={classes.category_name}>{`Контакти`}</span>
+                  <Contacts width="30px" height="30px" />
+                </Fragment>
+              ) : (
+                <Contacts width="48px" height="48px" />
+              )}
+            </Link>
           </Grid>
         </Grid>
       </Grid>
