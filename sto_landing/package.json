@@ -1,14 +1,21 @@
 {
-  "name": "sto_landing",
+  "name": "western-gtiservice",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "13.7.0",
+    "npm": "6.13.6"
+  },
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
     "leaflet": "^1.6.0",
+    "morgan": "^1.10.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",

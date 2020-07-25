@@ -37,97 +37,97 @@ import odo2 from './images/odo_slider/odo-2.jpg';
 export const reykaArr = [
     {
         img: reyka1,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: reyka2,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: reyka3,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: reyka4,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: reyka5,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: reyka6,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: reyka8,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: reyka10,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: reyka9,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: reyka7,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
-    
+
 ];
 export const tuningArr = [
     {
         img: tuning1,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: tuning2,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: tuning3,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: tuning4,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
 ];
 export const dpfArr = [
     {
         img: dpf0,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: dpf1,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: dpf2,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: dpf3,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
 ];
@@ -135,54 +135,54 @@ export const dpfArr = [
 export const egrArr = [
     {
         img: egr0,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: egr1,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: egr2,
-        title: 'Image',
+        title: "Image",
         cols: 3,
     },
-    
+
 ];
 export const srsArr = [
     {
         img: srs0,
-        title: 'Image',
+        title: "Image",
         cols: 3,
     },
     {
         img: srs1,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: srs2,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
-    
+
 ];
 export const odoArr = [
     {
         img: odo0,
-        title: 'Image',
+        title: "Image",
         cols: 1,
     },
     {
         img: odo1,
-        title: 'Image',
+        title: "Image",
         cols: 2,
     },
     {
         img: odo2,
-        title: 'Image',
+        title: "Image",
         cols: 3,
     },
-    
+
 ]

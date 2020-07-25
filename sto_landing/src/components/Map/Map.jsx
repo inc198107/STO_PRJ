@@ -1,5 +1,5 @@
-import React from "react";
-import { Map as LeafletMap, TileLayer, Polyline, Marker } from "react-leaflet";
+import React from 'react';
+import { Map as LeafletMap, TileLayer, Polyline, Marker } from 'react-leaflet';
 
 export default function LeafMap({ ...props }) {
   const center = [49.82658, 23.97589];
@@ -28,9 +28,9 @@ export default function LeafMap({ ...props }) {
       trackResize={true}
     >
       <TileLayer
-        url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" // colored maps
+        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' // colored maps
       />
-      <Polyline color="#d64b0a" positions={polyline} weight={4} />
+      <Polyline color='#d64b0a' positions={polyline} weight={4} />
       <Marker position={[49.82799, 23.97506]} />
     </LeafletMap>
   );
