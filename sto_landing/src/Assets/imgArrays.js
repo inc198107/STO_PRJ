@@ -61,12 +61,12 @@ export const reykaArr = [
     {
         img: reyka5,
         title: "Image",
-        cols: 3,
+        cols: 2,
     },
     {
         img: reyka6,
         title: "Image",
-        cols: 2,
+        cols: 1,
     },
     {
         img: reyka8,
@@ -76,17 +76,17 @@ export const reykaArr = [
     {
         img: reyka10,
         title: "Image",
-        cols: 1,
+        cols: 2,
     },
     {
         img: reyka9,
         title: "Image",
-        cols: 1,
+        cols: 2,
     },
     {
         img: reyka7,
         title: "Image",
-        cols: 2,
+        cols: 1,
     },
 
 ];
