@@ -1,18 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Map as LeafletMap, TileLayer, Polyline, Marker } from 'react-leaflet';
 
-export default function LeafMap({ ...props }) {
-  const center = [49.82658, 23.97589];
-  const polyline = [
-    [49.82412, 23.977298],
-    [49.827695, 23.97347],
-    [49.828145, 23.974521],
-    [49.82792, 23.974838],
-    [49.82782, 23.97509],
-    [49.82793, 23.97519],
-    [49.82799, 23.97506],
-  ];
-
+export default function LeafMap({ route, center, position, ...props }) {
+  
   return (
     <LeafletMap
       center={center}
@@ -30,8 +21,14 @@ export default function LeafMap({ ...props }) {
       <TileLayer
         url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' // colored maps
       />
-      <Polyline color='#d64b0a' positions={polyline} weight={4} />
-      <Marker position={[49.82799, 23.97506]} />
+      <Polyline color='#d64b0a' positions={route} weight={4} />
+      <Marker position={position} />
     </LeafletMap>
   );
+}
+
+LeafMap.propTypes = {
+  route: PropTypes.arrayOf(PropTypes.array),
+  center: PropTypes.array.isRequired,
+  position: PropTypes.array
 }

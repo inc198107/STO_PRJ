@@ -8,6 +8,8 @@ import { ReactComponent as MailIcon } from '../../Assets/images/icons/mail-icon.
 import { ReactComponent as ScheduleIcon } from '../../Assets/images/icons/schedule-icon.svg';
 import { ReactComponent as MapIcon } from '../../Assets/images/icons/map-icon.svg';
 
+import {route, center, position} from 'Assets/geo.js';
+
 const useStyles = makeStyles((theme) => ({
   main_sheet: {
     padding: '16px',
@@ -175,7 +177,7 @@ export default function Contacts({ ...props }) {
           <Grid item xl={12} lg={12} md={12} sm={12}>
             <div className={classes.article_name}>
               <div className={classes.horizontal} />
-              <h3 id='contacts'>{`Наші Kонтакти`}</h3>
+              <h3 id='contacts'>{`Нашi Kонтакти`}</h3>
               <div className={classes.horizontal} />
             </div>
           </Grid>
@@ -265,7 +267,7 @@ export default function Contacts({ ...props }) {
                     }
                     elevation={2}
                   >
-                    <LeafMap />
+                    <LeafMap route={route} center={center} position={position} />
                   </Paper>
                 </div>
               </Grid>

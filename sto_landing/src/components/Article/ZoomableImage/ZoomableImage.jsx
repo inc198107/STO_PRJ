@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import { useMediaQuery } from '@material-ui/core';
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
@@ -74,3 +75,7 @@ export default function ZoomableImage({ picture, ...props }) {
     </div>
   );
 }
+
+ZoomableImage.propTypes = {
+  picture: PropTypes.object.isRequired,
+};

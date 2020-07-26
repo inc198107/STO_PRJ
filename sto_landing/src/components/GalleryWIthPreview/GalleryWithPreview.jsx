@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { PageContext } from '../../pageReducers/LandingPageReducer';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import { GridList, GridListTile, useMediaQuery } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -54,4 +55,8 @@ export default function GalleryWithPreview({ images, ...props }) {
       </GridList>
     </div>
   );
+}
+
+GalleryWithPreview.propTypes = {
+  images: PropTypes.array.isRequired
 }

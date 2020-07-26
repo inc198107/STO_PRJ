@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 import GalleryWithPreview from '../GalleryWIthPreview/GalleryWithPreview';
 import ZoomableImage from './ZoomableImage';
 import { Grid, Paper, useMediaQuery, Link } from '@material-ui/core';
@@ -157,3 +158,20 @@ export default function Article({ text, name, articleName, redirect, slides, _id
     </Grid>
   );
 }
+
+Article.propTypes = {
+  text: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  articleName: PropTypes.string.isRequired,
+  redirect: PropTypes.string,
+  slides: PropTypes.arrayOf(
+    PropTypes.shape({
+      img: PropTypes.string,
+      title: PropTypes.string,
+      cols: PropTypes.number,
+    })
+  ).isRequired,
+  _id: PropTypes.string.isRequired,
+  lastOnPage: PropTypes.bool,
+  reverse: PropTypes.bool,
+};

@@ -1,18 +1,18 @@
 import React, { Fragment, useReducer } from 'react';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MainContainer from '../../Containers/MainContainer';
-import Article from '../../components/Article';
-import Contacts from '../../Containers/Contacts/Contacts';
-import PreviewModal from '../../components/PreviewModal';
-import ScrollTopButton from '../../components/ScrollTopButton';
-import Footer from '../../Containers/Footer';
-import { PageContext, initialState, PageReducer } from '../../pageReducers/LandingPageReducer';
+import MainContainer from 'Containers/MainContainer';
+import Article from 'components/Article';
+import Contacts from 'Containers/Contacts/Contacts';
+import PreviewModal from 'components/PreviewModal';
+import ScrollTopButton from 'components/ScrollTopButton';
+import Footer from 'Containers/Footer';
+import { PageContext, initialState, PageReducer } from 'pageReducers/LandingPageReducer';
 
-import Header from '../../Containers/Header';
+import Header from 'Containers/Header';
 
-import { reykaArr, tuningArr, dpfArr, egrArr, srsArr, odoArr } from '../../Assets/imgArrays';
-import { reykaText, tuningText, dpfText, egrText, srsText, odoText } from '../../Assets/articles';
+import { reykaArr, tuningArr, dpfArr, egrArr, srsArr, odoArr } from 'Assets/imgArrays';
+import { reykaText, tuningText, dpfText, egrText, srsText, odoText } from 'Assets/articles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,7 +45,7 @@ export default function LandingPage({ ...props }) {
             <Grid container direction='column' justify='flex-start' spacing={2}>
               <Article
                 _id={'steering'}
-                name={'Кермові Системи'}
+                name={'Кермовi Системи'}
                 slides={reykaArr}
                 redirect='https://zahid-chip.com/rulov-rejki'
                 text={reykaText}
@@ -64,7 +64,7 @@ export default function LandingPage({ ...props }) {
 
               <Article
                 _id={'fap_off'}
-                name={'Видалення Сажових Фільтрів'}
+                name={'Видалення Сажових Фiльтрiв'}
                 redirect='https://zahid-chip.com/vidalennya-sazhovih-f-ltr-v'
                 slides={dpfArr}
                 text={dpfText}
@@ -94,7 +94,7 @@ export default function LandingPage({ ...props }) {
 
               <Article
                 _id={'odo'}
-                name={'Корегування Одометрів'}
+                name={'Корегування Одометрiв'}
                 redirect='https://zahid-chip.com/koreguvannya-odometr-v'
                 slides={odoArr}
                 text={odoText}
