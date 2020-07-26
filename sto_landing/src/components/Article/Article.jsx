@@ -126,7 +126,7 @@ export default function Article({ text, name, articleName, redirect, slides, _id
                   )}
                   {mobile ? (
                     <div className={classes.adv}>
-                      <span>{`Для збільшення нажміть на фото`}</span>
+                      <span>{`Для збільшення торкніться фото`}</span>
                     </div>
                   ) : (
                     ''
