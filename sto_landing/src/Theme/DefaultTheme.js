@@ -5,6 +5,7 @@ export const defaultTheme = createMuiTheme({
     mainBckgr: '#115292',
     backgroundSecondary: 'rgba(255, 255, 255, 0.5)',
     greyGradient: 'linear-gradient(#575757, #000000)',
+    greyGradient1: `linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)`,
     contactsHover: 'rgb(255, 213, 79)'
   },
   blockShadows: {

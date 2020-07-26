@@ -85,6 +85,15 @@ const useStyle = makeStyles((theme) => ({
       backgroundColor: theme.backgrounds.contactsHover,
     },
   },
+  adv: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '8px',
+    fontSize: '12px',
+    color: theme.palette.secondary.light,
+  },
 }));
 
 export default function Article({ text, name, articleName, redirect, slides, _id, lastOnPage, reverse, ...props }) {
@@ -111,9 +120,16 @@ export default function Article({ text, name, articleName, redirect, slides, _id
               <Grid item xl={5} lg={5} md={6} sm={12} xs={12}>
                 <Paper elevation={2} className={classes.galery_container}>
                   {slides && slides.length > 1 ? (
-                    <GalleryWithPreview images={slides} />
+                    <GalleryWithPreview images={slides} reverse={reverse} />
                   ) : (
                     <ZoomableImage picture={slides && slides[0]} />
+                  )}
+                  {mobile ? (
+                    <div className={classes.adv}>
+                      <span>{`Для збільшення нажміть на фото`}</span>
+                    </div>
+                  ) : (
+                    ''
                   )}
                 </Paper>
               </Grid>

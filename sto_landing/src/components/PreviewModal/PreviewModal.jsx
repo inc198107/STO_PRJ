@@ -29,8 +29,8 @@ const useStyles = makeStyles((theme) => ({
   preview_img: {
     width: '100%',
     height: 'auto',
-    maxHeight: '80vh',
-    objectFit: 'contain',
+    maxHeight: '90vh',
+    objectFit: 'fill',
   },
   controls: {
     position: 'absolute',

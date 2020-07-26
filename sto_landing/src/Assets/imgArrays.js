@@ -22,14 +22,17 @@ import dpf3 from './images/dpf_slider/dpf-3.jpg';
 import egr0 from './images/egr_slider/egr-0.jpg';
 import egr1 from './images/egr_slider/egr-1.jpg';
 import egr2 from './images/egr_slider/egr-2.jpg';
+import egr3 from './images/egr_slider/egr-3.jpg';
 
 import srs0 from './images/srs_slider/srs-0.png';
 import srs1 from './images/srs_slider/srs-1.jpg';
 import srs2 from './images/srs_slider/srs-2.jpg';
+import srs3 from './images/srs_slider/srs-3.jpg';
 
 import odo0 from './images/odo_slider/odo-0.jpg';
 import odo1 from './images/odo_slider/odo-1.jpg';
 import odo2 from './images/odo_slider/odo-2.jpg';
+import odo3 from './images/odo_slider/odo-3.jpg';
 
 
 
@@ -58,7 +61,7 @@ export const reykaArr = [
     {
         img: reyka5,
         title: "Image",
-        cols: 1,
+        cols: 3,
     },
     {
         img: reyka6,
@@ -68,7 +71,7 @@ export const reykaArr = [
     {
         img: reyka8,
         title: "Image",
-        cols: 2,
+        cols: 1,
     },
     {
         img: reyka10,
@@ -146,18 +149,23 @@ export const egrArr = [
     {
         img: egr2,
         title: "Image",
-        cols: 3,
+        cols: 1,
+    },
+    {
+        img: egr3,
+        title: "Image",
+        cols: 2,
     },
 
 ];
 export const srsArr = [
     {
-        img: srs0,
+        img: srs1,
         title: "Image",
         cols: 3,
     },
     {
-        img: srs1,
+        img: srs0,
         title: "Image",
         cols: 2,
     },
@@ -166,6 +174,12 @@ export const srsArr = [
         title: "Image",
         cols: 1,
     },
+    {
+        img: srs3,
+        title: "Image",
+        cols: 3,
+    },
+
 
 ];
 export const odoArr = [
@@ -182,7 +196,12 @@ export const odoArr = [
     {
         img: odo2,
         title: "Image",
-        cols: 3,
+        cols: 2,
+    },
+    {
+        img: odo3,
+        title: "Image",
+        cols: 1,
     },
 
 ]
