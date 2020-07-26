@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     height: 'auto',
     maxHeight: '90vh',
-    objectFit: 'fill',
+    objectFit: 'contain',
   },
   controls: {
     position: 'absolute',
