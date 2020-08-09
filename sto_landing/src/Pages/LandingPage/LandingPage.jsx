@@ -1,6 +1,5 @@
 import React, { Fragment, useReducer } from 'react';
 import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
 import MainContainer from 'Containers/MainContainer';
 import Article from 'components/Article';
 import Contacts from 'Containers/Contacts/Contacts';
@@ -11,23 +10,12 @@ import { PageContext, initialState, PageReducer } from 'pageReducers/LandingPage
 
 import Header from 'Containers/Header';
 
+import { useStyles } from './style';
+
 import { reykaArr, tuningArr, dpfArr, egrArr, srsArr, odoArr } from 'Assets/imgArrays';
 import { reykaText, tuningText, dpfText, egrText, srsText, odoText } from 'Assets/articles';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    minHeight: '100vh',
-  },
-  scroll_top_container_right: {
-    position: 'sticky',
-    bottom: '16px',
-    paddingTop: '30px',
-    paddingRight: '24px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-  },
-}));
+
 
 export default function LandingPage({ ...props }) {
   const [state, dispatch] = useReducer(PageReducer, initialState);

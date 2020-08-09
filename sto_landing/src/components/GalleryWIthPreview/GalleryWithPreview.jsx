@@ -1,38 +1,11 @@
 import React, { useContext } from 'react';
 import { PageContext } from '../../pageReducers/LandingPageReducer';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { GridList, GridListTile, useMediaQuery, GridListTileBar, IconButton } from '@material-ui/core';
 import ZoomOutMapOutlinedIcon from '@material-ui/icons/ZoomOutMapOutlined';
 
-const useStyles = makeStyles((theme) => ({
-  galery_container: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
-  },
-  gridList: {
-    width: '100%',
-    height: 'auto',
-  },
-  titleBar: {
-    background: theme.backgrounds.greyGradient1,
-  },
-  icon: {
-    color: theme.fontColors.secondary0,
-    taransition: 'all 0.2s ease',
-    opacity: '0.8',
-    '&:hover': {
-      opacity: '1',
-    },
-  },
-  mobile_wieve: {
-    overflowY: 'scroll',
-    cursor: 'pointer',
-  },
-}));
+import { useStyles } from './style';
 
 export default function GalleryWithPreview({ images, reverse, ...props }) {
   const classes = useStyles();

@@ -1,34 +1,8 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import { makeStyles } from '@material-ui/core/styles';
+import { useTheme } from '@material-ui/core/styles'; 
 import { Grid, Link, useMediaQuery } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-  footer_root: {
-    display: 'flex',
-    boxSizing: 'border-box',
-    width: '100%',
-    padding: ' 16px 24px',
-    background: theme.backgrounds.greyGradient,
-  },
-  data: {
-    fontFamily: 'Western',
-    fontSize: '16px',
-    letterSpacing: 'normal',
-    color: theme.fontColors.secondary0,
-    padding: '8px 0',
-  },
-  data_link: {
-    display: 'flex',
-    boxSizing: 'border-box',
-    width: '100%',
-    padding: '8px 0',
-    justifyContent: 'flex-end',
-    '& a': {
-      color: theme.fontColors.secondary0,
-    },
-  },
-}));
+import { useStyles } from './style';
 
 export default function Footer({ ...props }) {
   const theme = useTheme();
