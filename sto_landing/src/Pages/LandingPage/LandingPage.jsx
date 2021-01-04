@@ -1,4 +1,4 @@
-import React, { Fragment, useReducer } from 'react';
+import React, { Fragment, useReducer} from 'react';
 import { Grid } from '@material-ui/core';
 import MainContainer from 'Containers/MainContainer';
 import Article from 'components/Article';

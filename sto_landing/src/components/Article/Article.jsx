@@ -9,7 +9,6 @@ import { useStyle } from './style';
 
 import { ReactComponent as FingerDown } from '../../Assets/images/icons/finger-icon.svg';
 
-
 export default function Article({ text, name, articleName, redirect, slides, _id, lastOnPage, reverse, ...props }) {
   const classes = useStyle();
   const theme = useTheme();
