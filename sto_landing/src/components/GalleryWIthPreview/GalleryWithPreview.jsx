@@ -7,7 +7,7 @@ import ZoomOutMapOutlinedIcon from '@material-ui/icons/ZoomOutMapOutlined';
 
 import { useStyles } from './style';
 
-export default function GalleryWithPreview({ images, reverse, ...props }) {
+const GalleryWithPreview = React.memo(function GalleryWithPreviewComponent({ images, reverse, ...props }) {
   const classes = useStyles();
   const { dispatch } = useContext(PageContext);
   const theme = useTheme();
@@ -58,7 +58,9 @@ export default function GalleryWithPreview({ images, reverse, ...props }) {
       </GridList>
     </div>
   );
-}
+})
+
+export default GalleryWithPreview;
 
 GalleryWithPreview.propTypes = {
   images: PropTypes.array.isRequired,
