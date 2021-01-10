@@ -56,14 +56,14 @@ export default function Article({ text, name, articleName, redirect, slides, _id
                     }}
                   />
                   <Grid container direction='row' justify='space-between' alignItems='center'>
-                    <Grid item alignItems='center' xl={7} lg={7} md={3} sm={12} xs={12}>
+                    <Grid item  xl={7} lg={7} md={3} sm={12} xs={12}>
                       {redirect ? (
                         <Link target='blank' rel='noopener noreferrer' href={redirect}>{`Докладніше...`}</Link>
                       ) : (
                         ''
                       )}
                     </Grid>
-                    <Grid alignItems='center' justify='flex-end' item xl={2} lg={3} md={4} sm={12} xs={12}>
+                    <Grid  item xl={2} lg={3} md={4} sm={12} xs={12}>
                       {!lastOnPage ? (
                         <a
                           href='/#contacts'

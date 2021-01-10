@@ -17,7 +17,7 @@ export default function Header({ links, ...props }) {
   const mobile = useMediaQuery(theme.breakpoints.down('xs'));
   const tablet = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <div item className={classes.header_root}>
+    <div item='true' className={classes.header_root}>
       <Grid container direction='column' justify='space-around' alignItems='center'>
         <Grid container alignItems='center' justify='center'>
           <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.main_title}>
