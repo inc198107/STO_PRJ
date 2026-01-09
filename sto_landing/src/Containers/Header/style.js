@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/styles';
 import headerBckgr from '../../Assets/images/header_bckgr_bw.jpg';
 
  export const useStyles = makeStyles((theme) => ({

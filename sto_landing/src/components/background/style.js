@@ -1,5 +1,5 @@
-import { makeStyles } from '@material-ui/core/styles';
-import mainBckgr from 'Assets/images/f-series.jpg';
+import { makeStyles } from '@mui/styles';
+import mainBckgr from '../../Assets/images/f-series.jpg';
 
 export const useStyle = makeStyles((theme) => ({
     main: {

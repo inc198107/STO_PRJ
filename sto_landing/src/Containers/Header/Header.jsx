@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
-import { useTheme } from '@material-ui/core/styles';
-import { Grid, Link, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@mui/material/styles';
+import { Link, useMediaQuery } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
 import { ReactComponent as Steering } from '../../Assets/images/icons/steering-wheel.svg';
 import { ReactComponent as Tuning } from '../../Assets/images/icons/processor.svg';
 import { ReactComponent as Contacts } from '../../Assets/images/icons/contacts-icon.svg';
@@ -18,25 +19,25 @@ export default function Header({ links, ...props }) {
   const tablet = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <div item='true' className={classes.header_root}>
-      <Grid container direction='column' justify='space-around' alignItems='center'>
-        <Grid container alignItems='center' justify='center'>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12} className={classes.main_title}>
+        <Grid2 container direction='column' justifyContent='space-around' alignItems='center'>
+          <Grid2 container alignItems='center' justifyContent='center'>
+          <Grid2 xs={12} className={classes.main_title}>
             <div className={!mobile ? `${classes.site_name}` : `${classes.site_name} ${classes.site_name_mobile}`}>
               <div className={classes.horizontal} />
               <h1>{`Western Chip`}</h1>
               <div className={classes.horizontal} />
             </div>
-          </Grid>
-        </Grid>
-        <Grid container direction='row' justify='space-around' alignItems='center'>
-          <Grid item xl={5} lg={6} md={7} sm={10} xs={10} className={classes.slogan_wrapper}>
+          </Grid2>
+        </Grid2>
+        <Grid2 container direction='row' justifyContent='space-around' alignItems='center'>
+          <Grid2 xs={10} sm={10} md={7} lg={6} xl={5} className={classes.slogan_wrapper}>
             <span
               className={!tablet ? classes.slogan : `${classes.slogan} ${classes.slogan_mobile}`}
             >{`We will make Your Car Perfect!`}</span>
-          </Grid>
-        </Grid>
-        <Grid container direction='row' justify='space-around' alignItems='center' className={classes.links}>
-          <Grid item>
+          </Grid2>
+        </Grid2>
+        <Grid2 container direction='row' justifyContent='space-around' alignItems='center' className={classes.links}>
+          <Grid2>
             <Link href='/#steering'>
               {!tablet ? (
                 <Fragment>
@@ -47,8 +48,8 @@ export default function Header({ links, ...props }) {
                 <Steering width='40px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Link href='/#chip_tuning'>
               {!tablet ? (
                 <Fragment>
@@ -59,8 +60,8 @@ export default function Header({ links, ...props }) {
                 <Tuning width='40px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Link href='/#fap_off'>
               {!tablet ? (
                 <Fragment>
@@ -71,8 +72,8 @@ export default function Header({ links, ...props }) {
                 <DpfOff width='50px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Link href='/#egr_off'>
               {!tablet ? (
                 <Fragment>
@@ -83,8 +84,8 @@ export default function Header({ links, ...props }) {
                 <EgrOff width='40px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Link href='/#airbag'>
               {!tablet ? (
                 <Fragment>
@@ -95,8 +96,8 @@ export default function Header({ links, ...props }) {
                 <AirBag width='40px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item>
+          </Grid2>
+          <Grid2>
             <Link href='/#odo'>
               {!tablet ? (
                 <Fragment>
@@ -107,8 +108,8 @@ export default function Header({ links, ...props }) {
                 <Odo width='40px' height='40px' />
               )}
             </Link>
-          </Grid>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
             <Link href='/#contacts' style={{ marginTop: '22px' }}>
               {!tablet ? (
                 <Fragment>
@@ -119,9 +120,9 @@ export default function Header({ links, ...props }) {
                 <Contacts width='48px' height='48px' />
               )}
             </Link>
-          </Grid>
-        </Grid>
-      </Grid>
+          </Grid2>
+        </Grid2>
+      </Grid2>
     </div>
   );
 }

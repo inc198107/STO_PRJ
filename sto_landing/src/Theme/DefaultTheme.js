@@ -1,6 +1,6 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles';
 
-export const defaultTheme = createMuiTheme({
+export const defaultTheme = createTheme({
   backgrounds: {
     mainBckgr: '#115292',
     backgroundSecondary: 'rgba(255, 255, 255, 0.5)',

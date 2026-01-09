@@ -3,27 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "13.7.0",
-    "npm": "6.13.6"
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
-    "@material-ui/core": "^4.10.2",
-    "@material-ui/icons": "^4.9.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.6",
+    "@mui/material": "^6.1.6",
+    "@mui/styles": "^6.1.6",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
     "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "leaflet": "^1.6.0",
+    "express": "^4.21.2",
+    "leaflet": "^1.9.4",
     "morgan": "^1.10.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-leaflet": "^2.7.0",
-    "react-scripts": "3.4.1",
-    "react-spring": "^8.0.27",
-    "react-swipeable-views": "^0.13.9",
-    "react-zoom-pan-pinch": "^1.6.1"
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-leaflet": "^4.2.1",
+    "react-scripts": "5.0.1",
+    "react-spring": "^9.7.3",
+    "react-swipeable-views": "^0.14.0",
+    "react-zoom-pan-pinch": "^3.0.0"
   },
   "scripts": {
     "postinstall": "npm run build",
@@ -31,9 +34,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -48,12 +48,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "prettier": "^2.0.5"
+    "prettier": "^3.3.3"
   }
 }

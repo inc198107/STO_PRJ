@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Map as LeafletMap, TileLayer, Polyline, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Polyline, Marker } from 'react-leaflet';
 
 export default function LeafMap({ route, center, position, ...props }) {
   
   return (
-    <LeafletMap
+    <MapContainer
       center={center}
       zoom={15}
       maxZoom={18}
@@ -14,16 +14,15 @@ export default function LeafMap({ route, center, position, ...props }) {
       doubleClickZoom={true}
       scrollWheelZoom={false}
       dragging={true}
-      animate={true}
-      easeLinearity={0.35}
-      trackResize={true}
+      style={{ height: '100%', width: '100%' }}
     >
       <TileLayer
-        url='http://{s}.tile.osm.org/{z}/{x}/{y}.png' // colored maps
+        url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       />
-      <Polyline color='#d64b0a' positions={route} weight={4} />
-      <Marker position={position} />
-    </LeafletMap>
+      {route && <Polyline color='#d64b0a' positions={route} weight={4} />}
+      {position && <Marker position={position} />}
+    </MapContainer>
   );
 }
 

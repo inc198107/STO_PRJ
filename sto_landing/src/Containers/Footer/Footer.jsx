@@ -1,6 +1,7 @@
 import React from 'react';
-import { useTheme } from '@material-ui/core/styles'; 
-import { Grid, Link, useMediaQuery } from '@material-ui/core';
+import { useTheme } from '@mui/material/styles'; 
+import { Link, useMediaQuery } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
 
 import { useStyles } from './style';
 
@@ -12,11 +13,11 @@ export default function Footer({ ...props }) {
   const classes = useStyles();
   return (
     <div className={classes.footer_root}>
-      <Grid container alignItems='center' justify='space-between' direction={mobile ? 'column' : 'row'}>
-        <Grid item xl={3} lg={3} md={4} sm={6} xs={12}>
+      <Grid2 container alignItems='center' justifyContent='space-between' direction={mobile ? 'column' : 'row'}>
+        <Grid2 xs={12} sm={6} md={4} lg={3} xl={3}>
           <span className={classes.data}>{`ZahidChip ${year}`}</span>
-        </Grid>
-        <Grid item xl={3} lg={3} md={4} sm={6} xs={12}>
+        </Grid2>
+        <Grid2 xs={12} sm={6} md={4} lg={3} xl={3}>
           <div className={classes.data_link}>
             <span className={`${classes.data}`}>
               {`Inspired by `}
@@ -25,8 +26,8 @@ export default function Footer({ ...props }) {
               </Link>
             </span>
           </div>
-        </Grid>
-      </Grid>
+        </Grid2>
+      </Grid2>
     </div>
   );
 }

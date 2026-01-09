@@ -1,7 +1,7 @@
 import React from 'react';
-import { Container } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import { useMediaQuery } from '@material-ui/core';
+import { Container } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
 import { useStyle } from './style';
 

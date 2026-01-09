@@ -1,10 +1,10 @@
 import React, { Fragment, useContext } from 'react';
 import { PageContext } from '../../pageReducers/LandingPageReducer';
-import { useTheme } from '@material-ui/core/styles';
-import { Paper, Modal, useMediaQuery } from '@material-ui/core';
-import CloseIcon from '@material-ui/icons/Close';
-import ZoomInIcon from '@material-ui/icons/ZoomIn';
-import ZoomOutIcon from '@material-ui/icons/ZoomOut';
+import { useTheme } from '@mui/material/styles';
+import { Paper, Modal, useMediaQuery } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+import ZoomOutIcon from '@mui/icons-material/ZoomOut';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 import { useStyles } from './style';

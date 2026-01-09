@@ -1,5 +1,6 @@
 import React, { Fragment, Profiler } from 'react';
-import { makeStyles, ThemeProvider } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import LandingPage from './Pages/LandingPage/LandingPage';
 import MainBackground from './components/background/background';
 import { defaultTheme } from './Theme/DefaultTheme';

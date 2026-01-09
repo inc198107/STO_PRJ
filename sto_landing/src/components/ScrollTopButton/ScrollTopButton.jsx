@@ -1,6 +1,6 @@
 import React from 'react';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
-import Button from '@material-ui/core/Button';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import Button from '@mui/material/Button';
 
 import { UseStyles } from './style';
 

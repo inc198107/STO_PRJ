@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import GalleryWithPreview from '../GalleryWIthPreview/GalleryWithPreview';
-import ZoomableImage from './ZoomableImage';
-import { Grid, Paper, useMediaQuery, Link } from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+import ZoomableImage from './ZoomableImage/ZoomableImage';
+import { Paper, useMediaQuery, Link } from '@mui/material';
+import Grid2 from '@mui/material/Grid2';
+import { useTheme } from '@mui/material/styles';
 
 import { useStyle } from './style';
 
@@ -15,22 +16,22 @@ import { ReactComponent as FingerDown } from '../../Assets/images/icons/finger-i
   const mobile = useMediaQuery(theme.breakpoints.down('xs'));
   const tablet = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+    <Grid2 xs={12}>
       <Paper
         className={!mobile ? classes.main_sheet : `${classes.main_sheet} ${classes.main_sheet_mobile}`}
         elevation={1}
       >
-        <Grid container direction='column'>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Grid2 container direction='column'>
+          <Grid2 xs={12}>
             <div id={_id} className={classes.article_name}>
               <div className={classes.horizontal} />
               <h3>{`${name}`}</h3>
               <div className={classes.horizontal} />
             </div>
-          </Grid>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-            <Grid container direction={reverse ? 'row-reverse' : 'row'} spacing={2}>
-              <Grid item xl={5} lg={5} md={6} sm={12} xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
+            <Grid2 container direction={reverse ? 'row-reverse' : 'row'} spacing={2}>
+              <Grid2 xs={12} sm={12} md={6} lg={5} xl={5}>
                 <Paper elevation={2} className={classes.galery_container}>
                   {slides && slides.length > 1 ? (
                     <GalleryWithPreview images={slides} reverse={reverse} />
@@ -45,8 +46,8 @@ import { ReactComponent as FingerDown } from '../../Assets/images/icons/finger-i
                     ''
                   )}
                 </Paper>
-              </Grid>
-              <Grid item xl={7} lg={7} md={6} sm={12} xs={12}>
+              </Grid2>
+              <Grid2 xs={12} sm={12} md={6} lg={7} xl={7}>
                 <article className={classes.article_text}>
                   <h5>{articleName}</h5>
                   <p
@@ -55,15 +56,15 @@ import { ReactComponent as FingerDown } from '../../Assets/images/icons/finger-i
                       __html: text.replace(/\n/g, '</br>'),
                     }}
                   />
-                  <Grid container direction='row' justify='space-between' alignItems='center'>
-                    <Grid item  xl={7} lg={7} md={3} sm={12} xs={12}>
+                  <Grid2 container direction='row' justifyContent='space-between' alignItems='center'>
+                    <Grid2 xs={12} sm={12} md={3} lg={7} xl={7}>
                       {redirect ? (
                         <Link target='blank' rel='noopener noreferrer' href={redirect}>{`Докладніше...`}</Link>
                       ) : (
                         ''
                       )}
-                    </Grid>
-                    <Grid  item xl={2} lg={3} md={4} sm={12} xs={12}>
+                    </Grid2>
+                    <Grid2 xs={12} sm={12} md={4} lg={3} xl={2}>
                       {!lastOnPage ? (
                         <a
                           href='/#contacts'
@@ -76,15 +77,15 @@ import { ReactComponent as FingerDown } from '../../Assets/images/icons/finger-i
                       ) : (
                         ''
                       )}
-                    </Grid>
-                  </Grid>
+                    </Grid2>
+                  </Grid2>
                 </article>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+              </Grid2>
+            </Grid2>
+          </Grid2>
+        </Grid2>
       </Paper>
-    </Grid>
+    </Grid2>
   );
 })
 

@@ -1,19 +1,19 @@
 import React, { Fragment, useReducer} from 'react';
-import { Grid } from '@material-ui/core';
-import MainContainer from 'Containers/MainContainer';
-import Article from 'components/Article';
-import Contacts from 'Containers/Contacts/Contacts';
-import PreviewModal from 'components/PreviewModal';
-import ScrollTopButton from 'components/ScrollTopButton';
-import Footer from 'Containers/Footer';
-import { PageContext, initialState, PageReducer } from 'pageReducers/LandingPageReducer';
+import Grid2 from '@mui/material/Grid2';
+import MainContainer from '../../Containers/MainContainer/MainContainer';
+import Article from '../../components/Article/Article';
+import Contacts from '../../Containers/Contacts/Contacts';
+import PreviewModal from '../../components/PreviewModal/PreviewModal';
+import ScrollTopButton from '../../components/ScrollTopButton/ScrollTopButton';
+import Footer from '../../Containers/Footer/Footer';
+import { PageContext, initialState, PageReducer } from '../../pageReducers/LandingPageReducer';
 
-import Header from 'Containers/Header';
+import Header from '../../Containers/Header/Header';
 
 import { useStyles } from './style';
 
-import { reykaArr, tuningArr, dpfArr, egrArr, srsArr, odoArr } from 'Assets/imgArrays';
-import { reykaText, tuningText, dpfText, egrText, srsText, odoText } from 'Assets/articles';
+import { reykaArr, tuningArr, dpfArr, egrArr, srsArr, odoArr } from '../../Assets/imgArrays';
+import { reykaText, tuningText, dpfText, egrText, srsText, odoText } from '../../Assets/articles';
 
 
 
@@ -23,14 +23,14 @@ export default function LandingPage({ ...props }) {
   return (
     <PageContext.Provider value={{ dispatch, state }}>
       <Fragment>
-        <Grid container alignItems='center' justify='center'>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Grid2 container alignItems='center' justifyContent='center'>
+          <Grid2 xs={12}>
             <Header />
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
         <MainContainer>
           <div className={classes.root}>
-            <Grid container direction='column' justify='flex-start' spacing={2}>
+            <Grid2 container direction='column' justifyContent='flex-start' spacing={2}>
               <Article
                 _id={'steering'}
                 name={'Кермовi Системи'}
@@ -91,17 +91,17 @@ export default function LandingPage({ ...props }) {
               />
 
               <Contacts />
-            </Grid>
+            </Grid2>
           </div>
           <div className={classes.scroll_top_container_right}>
             <ScrollTopButton />
           </div>
         </MainContainer>
-        <Grid container alignItems='center' justify='center'>
-          <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
+        <Grid2 container alignItems='center' justifyContent='center'>
+          <Grid2 xs={12}>
             <Footer />
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
         <PreviewModal />
       </Fragment>
     </PageContext.Provider>
